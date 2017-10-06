@@ -23,7 +23,7 @@ class UserRetrieveUpdateAPIView(RetrieveUpdateAPIView):
 
         return Response(serializer.data, status=status.HTTP_200_OK)
 
-    #pylint: disable=unused-argument
+    # pylint: disable=unused-argument
     def update(self, request, *args, **kwargs):
         user_data = request.data.get('user', {})
 

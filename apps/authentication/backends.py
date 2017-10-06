@@ -69,13 +69,15 @@ class JWTAuthentication(authentication.BaseAuthentication):
     # Disable pylint warnings:
     # R0201: Method could be a function
     # W0613: Unused argument 'request'
-    #pylint: disable=W0613,R0201
+    # pylint: disable=W0613,R0201
+    # noinspection PyUnusedLocal
     def _authenticate_credentials(self, request, token):
         """
         Try to authenticate the given credentials. If authentication is
         successful, return the user and token. If not, throw an error.
         """
 
+        # noinspection PyPep8
         try:
             payload = jwt.decode(token, settings.SECRET_KEY)
         except:
@@ -92,4 +94,4 @@ class JWTAuthentication(authentication.BaseAuthentication):
             msg = 'This user has been deactivated.'
             raise exceptions.AuthenticationFailed(msg)
 
-        return (user, token)
+        return user, token

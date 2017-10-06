@@ -9,6 +9,7 @@ import phonenumber_field.modelfields
 import uuid
 
 
+# noinspection PyPep8,PyPep8,PyPep8
 class Migration(migrations.Migration):
 
     initial = True

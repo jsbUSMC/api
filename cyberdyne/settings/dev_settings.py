@@ -1,11 +1,11 @@
 import logging.config
-#pylint: disable=W0401,W0614
+# pylint: disable=W0401,W0614
 from .settings import *
 
 LOGFILE_ROOT = join(dirname(BASE_DIR), 'logs')
 
 # Reset logging
-#pylint: disable=C0301
+# pylint: disable=C0301
 # (see http://www.caktusgroup.com/blog/2015/01/27/Django-Logging-Configuration-logging_config-default-settings-logger/)
 LOGGING_CONFIG = None
 LOGGING = {

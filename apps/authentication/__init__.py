@@ -7,8 +7,9 @@ class AuthenticationAppConfig(AppConfig):
     verbose_name = 'Authentication'
 
     def ready(self):
-        #pylint: disable=W0612
+        # pylint: disable=W0612
         import apps.authentication.signals
+
 
 # This is how we register our custom app config with Django. Django is smart
 # enough to look for the `default_app_config` property of each registered app

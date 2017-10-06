@@ -37,7 +37,6 @@ class UserSerializer(ModelSerializer):
         # field.
         read_only_fields = ('token',)
 
-
     def update(self, instance, validated_data):
         """Performs an update on a User."""
 
@@ -78,7 +77,7 @@ class UserSerializer(ModelSerializer):
         return instance
 
 
-#pylint: disable=W0223
+# pylint: disable=W0223
 class LoginSerializer(serializers.Serializer):
     email = serializers.CharField(max_length=255)
     name = serializers.CharField(max_length=255, read_only=True)
@@ -86,7 +85,7 @@ class LoginSerializer(serializers.Serializer):
     token = serializers.CharField(max_length=255, read_only=True)
 
     # Disable pylint's warning message: parameters differ from overriden method
-    #pylint: disable=W0221
+    # pylint: disable=W0221
     def validate(self, data):
         # The `validate` method is where we make sure that the current
         # instance of `LoginSerializer` has "valid". In the case of logging a

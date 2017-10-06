@@ -1,5 +1,5 @@
 """
-WSGI config for edgeapi project.
+WSGI config for cyberdyne project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -12,17 +12,22 @@ import os
 from django.conf import settings
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "edgeapi.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "cyberdyne.settings")
 
 application = get_wsgi_application()
 
 # Wrap werkzeug debugger if DEBUG is on
 if settings.DEBUG:
     try:
+        # noinspection PyUnresolvedReferences
         import django.views.debug
+        # noinspection PyUnresolvedReferences
         import six
+        # noinspection PyUnresolvedReferences
         from werkzeug.debug import DebuggedApplication
 
+
+        # noinspection PyUnusedLocal
         def null_technical_500_response(request, exc_type, exc_value, tb):
             six.reraise(exc_type, exc_value, tb)
 

@@ -1,5 +1,6 @@
 from apps.core.renderers import CustomJSONRenderer
 
+
 class UserJSONRenderer(CustomJSONRenderer):
     object_label = 'user'
     pagination_object_label = 'users'

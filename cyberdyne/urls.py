@@ -1,4 +1,4 @@
-"""edgeapi URL Configuration
+"""cyberdyne URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -17,7 +17,7 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.conf import settings
 
-#pylint: disable=invalid-name
+# pylint: disable=invalid-name
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # Use django-authtools urls for authentication
@@ -26,6 +26,7 @@ urlpatterns = [
 
 if settings.DEBUG:
     import debug_toolbar
+
     urlpatterns = [
-        url(r'^__debug__/', include(debug_toolbar.urls)),
-    ] + urlpatterns
+                      url(r'^__debug__/', include(debug_toolbar.urls)),
+                  ] + urlpatterns

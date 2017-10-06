@@ -14,6 +14,7 @@ class Migration(migrations.Migration):
         ('auth', '0008_alter_user_username_max_length'),
     ]
 
+    # noinspection PyPep8,PyPep8,PyPep8,PyPep8,PyPep8,PyUnresolvedReferences,PyUnresolvedReferences
     operations = [
         migrations.CreateModel(
             name='User',
